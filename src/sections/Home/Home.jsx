@@ -68,7 +68,7 @@ export default function Home() {
                 <Suspense fallback={<CanvasLoader />}>
                     <VirtualDesk 
                     scale={0.04} 
-                    position={[2, 0, 0]} 
+                    position={[1, 0, 0]} 
                     rotation={[0, 2.3, 0]} />
                 </Suspense>
                 <PerspectiveCamera makeDefault position={[0, 9, 13]} />
