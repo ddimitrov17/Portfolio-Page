@@ -15,3 +15,7 @@ body {
   background: #121212;
   font-family: 'General Sans', sans-serif;
 }
+
+/* body::-webkit-scrollbar {
+  display: none; 
+} TODO: ADD WHEN READY */ 

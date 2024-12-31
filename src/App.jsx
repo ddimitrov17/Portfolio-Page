@@ -1,12 +1,14 @@
 import './App.css'
+import AboutSection from './sections/About';
 import Home from './sections/Home/Home';
 import NavigationBar from './sections/NavigationBar/Navigation';
 
 function App() {
   return (
-    <main className='pt-20'>
+    <main>
       <NavigationBar/>
       <Home/>
+      <AboutSection/>
     </main>
   )
 }

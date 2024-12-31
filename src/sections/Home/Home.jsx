@@ -62,17 +62,18 @@ export default function Home() {
     //     }
     // })
     return (
-        <section id="home" className="w-full h-[700px]">
+        <section id="home" className="w-full h-[600px]">
             {/* <Leva hidden/> */}
             <Canvas className="w-full h-full">
                 <Suspense fallback={<CanvasLoader />}>
                     <VirtualDesk 
-                    scale={0.04} 
+                    scale={0.045} 
                     position={[1, 0, 0]} 
                     rotation={[0, 2.3, 0]} />
                 </Suspense>
                 <PerspectiveCamera makeDefault position={[0, 9, 13]} />
-                <OrbitControls enableZoom={true} />
+                <OrbitControls enableZoom={true} minPolarAngle={Math.PI / 4}
+                    maxPolarAngle={Math.PI / 2}/>
                 <ambientLight intensity={1.4} />
             </Canvas>
         </section>

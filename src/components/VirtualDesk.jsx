@@ -7,7 +7,7 @@ export default function VirtualDesk(props) {
   const bookTexture = useTexture('/assets/book.png');
   const socialNetworkTexture = useTexture('/assets/socialnetwork.png');
   const flightTexture = useTexture('/assets/flight.png');
-  const monitorOff= useTexture('/assets/off_monitor.png')
+  const monitorOff = useTexture('/assets/off_monitor.png')
   return (
     <group {...props} dispose={null}>
       <group position={[0, 75.567, -29.303]}>
@@ -25,10 +25,13 @@ export default function VirtualDesk(props) {
           material={materials.cran}
           position={[0, 0.65, -5.653]}
           rotation={[1.222, 0, 0]}
+          onPointerOver={() => (document.body.style.cursor = 'pointer')}
+          onPointerOut={() => (document.body.style.cursor = 'default')}
+          onClick={(e) => console.log('Laptop clicked!')}
         >
-            <meshStandardMaterial map={bookTexture} 
+          <meshStandardMaterial map={bookTexture}
             map-repeat={[1.5, 3]}
-            />
+          />
         </mesh>
       </group>
       <mesh
@@ -61,7 +64,7 @@ export default function VirtualDesk(props) {
         geometry={nodes.Ecran_d_Ecran_d_0.geometry}
         material={materials.Ecran_d}
         position={[9.462, 77.607, -38.804]}
-        ><meshStandardMaterial map={monitorOff} map-repeat={[1.2, 1.1]} /></mesh>
+      ><meshStandardMaterial map={monitorOff} map-repeat={[1.2, 1.1]} /></mesh>
       <mesh
         geometry={nodes['tasse_��_th��_1_tasse_��_th��_0'].geometry}
         material={materials.tasse__th}
