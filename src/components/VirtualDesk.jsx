@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useTexture } from '@react-three/drei';
+import { useControls } from 'leva';
 
 export default function VirtualDesk(props) {
   const { nodes, materials } = useGLTF('/models/my_virtual_desk.glb')
@@ -8,6 +9,16 @@ export default function VirtualDesk(props) {
   const socialNetworkTexture = useTexture('/assets/socialnetwork.png');
   const flightTexture = useTexture('/assets/flight.png');
   const monitorOff = useTexture('/assets/off_monitor.png')
+  const bookAppLogo = useTexture('/assets/booklogo.png');
+
+  // const { x, y, z, rotationX, rotationY, rotationZ } = useControls('Social Network Position', {
+  //   x: { value: -159, min: -200, max: 200, step: 1 },
+  //   y: { value: 93, min: 0, max: 200, step: 1 },
+  //   z: { value: 100, min: -400, max: 100, step: 1 },
+  //   rotationX: { value: -0.03, min: -Math.PI, max: Math.PI, step: 0.01 },
+  //   rotationY: { value: -3.14, min: -Math.PI, max: Math.PI, step: 0.01 },
+  //   rotationZ: { value: 0.28, min: -Math.PI, max: Math.PI, step: 0.01 },
+  // });
   return (
     <group {...props} dispose={null}>
       <group position={[0, 75.567, -29.303]}>

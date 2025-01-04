@@ -8,10 +8,14 @@ export default {
     extend: {
       colors: {
         aboutSectionColor: '#0E0E10',
-        aboutBorder: '#1C1C21'
-      }
+        aboutBorder: '#1C1C21',
+      },
+      backgroundImage: {
+        BookAppBackground: "url('/assets/booklogo.png')", 
+        TripAppBackground: "url('assets/flight.png')",
+        SocialNetworkBackground: "url('assets/socialnetwork.png')"
+      },
     },
   },
   plugins: [],
-}
-
+};
