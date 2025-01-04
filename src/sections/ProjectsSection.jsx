@@ -1,12 +1,52 @@
-import { useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { myProjects } from "../data/projects";
+import CanvasLoader from "../components/CanvasLoader";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+import { Canvas } from '@react-three/fiber';
+import Plane from "./project models/Plane";
+import { useControls } from 'leva';
+import Books from "./project models/Books";
+import SocialNetwork from "./project models/Social";
 
 export default function ProjectSection() {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
     const currentProject = myProjects[selectedProjectIndex];
     const projectCount = myProjects.length;
+    useEffect(() => {
+        console.log(myProjects[selectedProjectIndex].title);
+    }, [selectedProjectIndex]);
+
+    // const { scale, positionX, positionY, positionZ, rotationX, rotationY, rotationZ } = useControls('Books Controls', {
+    //     scale: {
+    //         value: 28.1,
+    //         min: 1,
+    //         max: 30,
+    //         step: 0.1,
+    //     },
+    //     positionX: {
+    //         value: 2.3,
+    //         min: -5,
+    //         max: 5,
+    //         step: 0.1,
+    //     },
+    //     positionY: {
+    //         value: -24.1,
+    //         min: -50,
+    //         max: 5,
+    //         step: 0.1,
+    //     },
+    //     positionZ: {
+    //         value: -4.0,
+    //         min: -15,
+    //         max: 5,
+    //         step: 0.1,
+    //     },
+    //     rotationX: { value: -0.60, min: -Math.PI, max: Math.PI, step: 0.01 },
+    //     rotationY: { value: 0.01, min: -Math.PI, max: Math.PI, step: 0.01 },
+    //     rotationZ: { value: 0.02, min: -Math.PI, max: Math.PI, step: 0.01 },
+    // });
 
     const handleNavigation = (direction) => {
         setSelectedProjectIndex((prevIndex) => {
@@ -76,8 +116,7 @@ export default function ProjectSection() {
                                     key={index}
                                     onClick={() => setSelectedProjectIndex(index)}
                                     className={`w-3 h-3 rounded-full ${selectedProjectIndex === index ? 'bg-white' : 'bg-gray-500'
-                                        }`}
-                                ></button>
+                                        }`}></button>
                             ))}
                         </div>
 
@@ -88,9 +127,40 @@ export default function ProjectSection() {
                 </div>
 
                 <div className="border border-aboutBorder bg-black-200 rounded-lg h-96 md:h-full">
-
+                    <Canvas className="w-[100%] h-[100%]">
+                        <Suspense fallback={<CanvasLoader />}>
+                            {myProjects[selectedProjectIndex].title == 'AI Trip Assistant' && <Plane
+                                scale={0.5}
+                                position={[1, 0.00, 0.00]}
+                                rotation={[-0.13, 0.91, 0.00]}
+                            />}
+                            {myProjects[selectedProjectIndex].title == 'D-Book App' && <Books
+                                scale={7.2}
+                                position={[2.2, -2.4, 0.0]}
+                                rotation={[-0.13, 0.44, 0.00]}
+                            />}
+                            {myProjects[selectedProjectIndex].title == 'D-Social-Network' && <SocialNetwork scale={28.1}
+                                position={[
+                                    2.3,
+                                    -24.1,
+                                    -4.0,
+                                ]}
+                                rotation={[
+                                    -0.60,
+                                    0.01,
+                                    0.02,
+                                ]} />}
+                        </Suspense>
+                        <PerspectiveCamera makeDefault position={[-1, 9, 13]} />
+                        <OrbitControls
+                            enableZoom={true}
+                            minPolarAngle={Math.PI / 4}
+                            maxPolarAngle={Math.PI / 2}
+                        />
+                        <ambientLight intensity={4} />
+                    </Canvas>
                 </div>
             </div>
         </section>
-    )
+    );
 }
