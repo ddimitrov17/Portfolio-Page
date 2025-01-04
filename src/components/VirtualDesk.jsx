@@ -51,7 +51,7 @@ export default function VirtualDesk(props) {
         position={[-25.616, 78.673, -70.192]}
         rotation={[0, 0, Math.PI / 2]}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.post_it__rose_1_Mat6_0.geometry}
         material={materials['Mat.6']}
         position={[-24.62, 78.378, -134.572]}
@@ -70,7 +70,7 @@ export default function VirtualDesk(props) {
         geometry={nodes.post_it_vert_Mat1_0.geometry}
         material={materials['Mat.1']}
         position={[-24.62, 78.378, -109.163]}
-      />
+      /> */}
       <mesh
         geometry={nodes.Ecran_d_Ecran_d_0.geometry}
         material={materials.Ecran_d}
@@ -98,11 +98,11 @@ export default function VirtualDesk(props) {
         position={[-75.607, 2.379, -42.564]}
         rotation={[Math.PI, 0, -Math.PI]}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.classeur_rouge_Mat5_0.geometry}
         material={materials['Mat.5']}
         position={[-7.781, 77.698, 19.175]}
-      />
+      /> */}
       <mesh
         geometry={nodes.claseur_bleu_Mat4_0.geometry}
         material={materials['Mat.4']}

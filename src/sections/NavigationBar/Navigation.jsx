@@ -6,7 +6,7 @@ export default function NavigationBar() {
                         Dimitar Dimitrov
                     </a>
                 </div>
-                <div className="flex justify-between items-center py-5 px-5 gap-5 mr-12">
+                <div className="flex justify-between items-center py-5 px-5 gap-5 mr-8">
                     <a href="/" className="text-neutral-400 font-semibold text-xl hover:text-white">
                         Home
                     </a>
