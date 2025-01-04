@@ -12,7 +12,7 @@ export default function Home() {
                 <div className="bg-TripAppBackground w-[120px] h-[120px] bg-cover z-50 rounded-xl border-4 border-aboutBorder transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
                 <div className="bg-BookAppBackground w-[120px] h-[100px] bg-cover z-50 rounded-xl border-4 border-aboutBorder transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
             </div>
-            <Canvas className="absolute top-0 left-0 w-full h-full z-10 border border-aboutBorder">
+            <Canvas className="absolute top-0 left-0 w-full h-full z-10 border border-aboutBorder bg-[#262627] rounded-xl">
                 <Suspense fallback={<CanvasLoader />}>
                     <VirtualDesk
                         scale={0.048}
