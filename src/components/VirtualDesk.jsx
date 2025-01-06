@@ -25,7 +25,10 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
         <mesh geometry={nodes.Cube_Mat91_1.geometry} material={materials['Mat.9.1']} />
         <mesh geometry={nodes.Cube_Mat8_1.geometry} material={materials['Mat.8']} />
       </group>
-      <group position={[-23.152, 78.928, -43.659]} rotation={[0, -Math.PI / 2, 0]}>
+      <group position={[-23.152, 78.928, -43.659]} rotation={[0, -Math.PI / 2, 0]}
+        onClick={onLaptopClick}
+        onPointerOver={() => (document.body.style.cursor = 'pointer')}
+        onPointerOut={() => (document.body.style.cursor = 'default')}>
         <mesh
           geometry={nodes.Clavier_Clavier_0.geometry}
           material={materials.Clavier}
@@ -36,9 +39,6 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
           material={materials.cran}
           position={[0, 0.65, -5.653]}
           rotation={[1.222, 0, 0]}
-          onPointerOver={() => (document.body.style.cursor = 'pointer')}
-          onPointerOut={() => (document.body.style.cursor = 'default')}
-          onClick={onLaptopClick}
         >
           <meshStandardMaterial map={bookTexture}
             map-repeat={[1.5, 3]}
