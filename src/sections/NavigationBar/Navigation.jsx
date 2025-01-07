@@ -7,16 +7,16 @@ export default function NavigationBar() {
                     </a>
                 </div>
                 <div className="flex justify-between items-center py-5 px-5 gap-5 mr-8">
-                    <a href="/" className="text-neutral-400 font-semibold text-xl hover:text-white">
+                    <a href="#home" className="text-neutral-400 font-semibold text-xl hover:text-white">
                         Home
                     </a>
                     <a href="#about" className="text-neutral-400 font-semibold text-xl hover:text-white">
                         About
                     </a>
-                    <a href="/projects" className="text-neutral-400 font-semibold text-xl hover:text-white">
+                    <a href="#projects" className="text-neutral-400 font-semibold text-xl hover:text-white">
                         Projects
                     </a>
-                    <a href="/contact" className="text-neutral-400 font-semibold text-xl hover:text-white">
+                    <a href="#contact" className="text-neutral-400 font-semibold text-xl hover:text-white">
                         Contact
                     </a>
                 </div>

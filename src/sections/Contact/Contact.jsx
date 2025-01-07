@@ -11,7 +11,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="w-full px-12 mb-20">
+        <section id="contact" className="w-full px-12 mb-20">
             <h2 className="text-neutral-400 font-semibold text-3xl mb-5">Contact</h2>
             <div className="col-span-1 xl:row-span-3 w-[1200px] mx-auto">
                 <div className="w-full h-full border border-aboutBorder bg-aboutSectionColor rounded-lg sm:p-7 p-4 flex flex-col gap-5">

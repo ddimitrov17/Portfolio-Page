@@ -1,6 +1,6 @@
 export default function AboutSection() {
     return (
-        <section className="w-full px-12">
+        <section id="about" className="w-full px-12">
             <h2 className="text-neutral-400 font-semibold text-3xl mb-5">About me</h2>
             <div className="flex flex-col gap-5 h-full w-full mb-5">
                 <div className="flex flex-row gap-5">
@@ -20,8 +20,7 @@ export default function AboutSection() {
                             <div>
                                 <p className="text-xl font-semibold mb-2 text-white font-generalsans">My Passion for Coding</p>
                                 <p className="text-[#afb0b6] text-base font-generalsans">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quidem eius magnam excepturi voluptas, debitis aspernatur dolorum reprehenderit ea? Ullam nemo voluptas doloremque iusto nulla!
-                                </p>
+                                    I have always considered myself good at logical sciences, and I think coding is a natural fit for me. It combines solving logical problems with creativity, and I genuinely enjoy the process. The projects I’ve worked on show that I love coding—not just for the challenge but also for the opportunity to solve real-world problems and create useful services. As I’ve progressed in my coding journey, I’ve come to understand how much value you can create through code, whether it’s improving everyday life with useful services or products, or automating tasks to make things more efficient.                                </p>
                             </div>
                         </div>
                     </div>
@@ -32,8 +31,20 @@ export default function AboutSection() {
                         <div>
                             <p className="text-xl font-semibold mb-2 text-white font-generalsans">Tech Stack</p>
                             <p className="text-[#afb0b6] text-base font-generalsans">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, dolorem ea dignissimos repellat eveniet iure animi quasi suscipit possimus nam voluptas voluptatibus blanditiis corporis, illum facere incidunt est alias deserunt a ex? Doloremque qui natus voluptatum perferendis nihil quasi magnam quod dolorum fuga, autem exercitationem voluptatem itaque eaque placeat molestias reprehenderit doloribus animi fugit maiores quis libero adipisci eos. Mollitia animi vel quibusdam error blanditiis facere. Reiciendis at, eos est repudiandae nisi quas nihil perspiciatis similique omnis dicta, a ducimus non odio obcaecati impedit, quod reprehenderit? Dolores repellendus corporis ad nemo libero, cum itaque, quae impedit eius, suscipit adipisci. Consectetur voluptatum fuga culpa maiores iste aut atque officiis temporibus aperiam dolores! Veniam omnis est facere nam velit commodi impedit doloremque modi, maxime vero ullam rerum illo nostrum obcaecati quis autem sapiente ipsa asperiores, voluptatum cum? Delectus error mollitia atque nulla repudiandae, ipsa recusandae at consequuntur, nesciunt maxime cumque, tempora vero?
+                                These are the technologies I have used in my projects have specialized in and used in my projects.
                             </p>
+                            <div className="flex flex-row gap-10 justify-center m-12">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" className="w-[80px] h-[80px]" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" className="w-[80px] h-[80px]" />
+                            </div>
                         </div>
                     </div>
                 </div>

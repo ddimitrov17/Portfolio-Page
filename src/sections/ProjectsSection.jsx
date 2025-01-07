@@ -63,7 +63,7 @@ export default function ProjectSection() {
     }, [selectedProjectIndex]);
 
     return (
-        <section className="c-space my-20 p-12">
+        <section id="projects" className="c-space my-20 p-12">
             <p className="text-neutral-400 font-semibold text-3xl mb-5">My Work</p>
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl bg-aboutSectionColor border border-aboutBorder rounded-lg shadow-black-200">
