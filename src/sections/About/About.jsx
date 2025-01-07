@@ -31,7 +31,7 @@ export default function AboutSection() {
                         <div>
                             <p className="text-xl font-semibold mb-2 text-white font-generalsans">Tech Stack</p>
                             <p className="text-[#afb0b6] text-base font-generalsans">
-                                These are the technologies I have used in my projects have specialized in and used in my projects.
+                                These are the technologies I have specialized in and used in my projects.
                             </p>
                             <div className="flex flex-row gap-10 justify-center m-12">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" className="w-[80px] h-[80px]" />
