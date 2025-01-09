@@ -14,9 +14,9 @@ export default function ProjectSection() {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
     const currentProject = myProjects[selectedProjectIndex];
     const projectCount = myProjects.length;
-    useEffect(() => {
-        console.log(myProjects[selectedProjectIndex].title);
-    }, [selectedProjectIndex]);
+    // useEffect(() => {
+    //     console.log(myProjects[selectedProjectIndex].title);
+    // }, [selectedProjectIndex]);
 
     // const { scale, positionX, positionY, positionZ, rotationX, rotationY, rotationZ } = useControls('Books Controls', {
     //     scale: {

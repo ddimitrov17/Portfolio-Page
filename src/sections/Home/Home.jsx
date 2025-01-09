@@ -19,7 +19,7 @@ export default function Home() {
     };
 
     return (
-        <section id="home" className="relative w-[1200px] h-[600px] mx-auto p-16">
+        <section id="home" className="relative w-[1200px] h-[600px] mx-auto p-16 max-1400:w-[100%]" >
             {/* TIP Button above the Canvas */}
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-50 w-[450px] p-1 h-[40px] border border-aboutBorder bg-aboutSectionColor rounded-lg text-white font-generalsans text-sm font-semibold flex justify-center items-center">
                 TIP: Click on the Laptop in order to hide/unhide the project logos.

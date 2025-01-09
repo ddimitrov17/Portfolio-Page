@@ -11,10 +11,13 @@ export default {
         aboutBorder: '#1C1C21',
       },
       backgroundImage: {
-        BookAppBackground: "url('/assets/booklogo.png')", 
+        BookAppBackground: "url('/assets/booklogo.png')",
         TripAppBackground: "url('assets/flight.png')",
         SocialNetworkBackground: "url('assets/socialnetwork.png')"
       },
+      screens: {
+        'max-1400': { max: '1400px' },
+      }
     },
   },
   plugins: [],

@@ -11,9 +11,9 @@ export default function Contact() {
     };
 
     return (
-        <section id="contact" className="w-full px-12 mb-20">
+        <section id="contact" className="w-full px-12 mb-20 max-1400:w-[100%]">
             <h2 className="text-neutral-400 font-semibold text-3xl mb-5">Contact</h2>
-            <div className="col-span-1 xl:row-span-3 w-[1200px] mx-auto">
+            <div className="col-span-1 xl:row-span-3 w-[1200px] mx-auto max-1400:w-[100%]">
                 <div className="w-full h-full border border-aboutBorder bg-aboutSectionColor rounded-lg sm:p-7 p-4 flex flex-col gap-5">
                     <div className="flex flex-col gap-7 justify-center items-center p-12">
                         <p className="text-[#afb0b6] text-xl font-generalsans font-semibold">
