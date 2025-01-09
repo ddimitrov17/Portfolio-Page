@@ -16,20 +16,20 @@ export default function Contact() {
             <div className="col-span-1 xl:row-span-3 w-[1200px] mx-auto max-1400:w-[100%]">
                 <div className="w-full h-full border border-aboutBorder bg-aboutSectionColor rounded-lg sm:p-7 p-4 flex flex-col gap-5">
                     <div className="flex flex-col gap-7 justify-center items-center p-12">
-                        <p className="text-[#afb0b6] text-xl font-generalsans font-semibold">
-                            <span className="text-2xl font-semibold mb-2 text-white font-generalsans">👦</span> Dimitar Dimitrov
+                        <p className="text-[#afb0b6] text-xl font-generalsans font-semibold max-600:text-[smaller]">
+                            <span className="text-2xl font-semibold mb-2 text-white font-generalsans max-600:text-[smaller]">👦</span> Dimitar Dimitrov
                         </p>
-                        <p className="text-[#afb0b6] text-xl font-generalsans font-semibold flex items-center gap-3">
-                            <span className="text-2xl font-semibold mb-2 text-white font-generalsans">✉️</span> dimitardimitrov0317@gmail.com
+                        <p className="text-[#afb0b6] text-xl font-generalsans font-semibold flex items-center gap-3 max-600:text-[smaller]">
+                            <span className="text-2xl font-semibold mb-2 text-white font-generalsans max-600:text-[smaller]">✉️</span> dimitardimitrov0317@gmail.com
                             <button
                                 onClick={() => copyToClipboard("dimitardimitrov0317@gmail.com")}
-                                className="text-sm px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition"
+                                className="text-sm px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600 transition max-600:text-[7px] max-600:px-[0] max-600:py-[0]"
                             >
                                 {copied ? "Copied!" : "Copy"}
                             </button>
                         </p>
-                        <p className="text-[#afb0b6] text-xl font-generalsans font-semibold">
-                            <span className="text-2xl font-semibold mb-2 text-white font-generalsans">📍</span> Sofia, Bulgaria
+                        <p className="text-[#afb0b6] text-xl font-generalsans font-semibold max-600:text-[smaller]">
+                            <span className="text-2xl font-semibold mb-2 text-white font-generalsans max-600:text-[smaller]">📍</span> Sofia, Bulgaria
                         </p>
                     </div>
                     <div className="flex justify-center items-center gap-10">
