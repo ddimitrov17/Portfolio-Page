@@ -34,10 +34,10 @@ export default function Contact() {
                     </div>
                     <div className="flex justify-center items-center gap-10">
                         <a href="https://www.linkedin.com/in/dimitar-dimitrov-9b0960299" target="_blank" rel="noreferrer">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" className="w-[40px] h-[40px] cursor-pointer" alt="LinkedIn" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" className="w-[40px] h-[40px] cursor-pointer hover:scale-110" alt="LinkedIn" />
                         </a>
                         <a href="https://github.com/ddimitrov17" target="_blank" rel="noreferrer">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" className="w-[40px] h-[40px] cursor-pointer" alt="GitHub" />
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" className="w-[40px] h-[40px] cursor-pointer hover:scale-110" alt="GitHub" />
                         </a>
                     </div>
                 </div>

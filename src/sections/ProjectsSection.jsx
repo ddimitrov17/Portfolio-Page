@@ -126,7 +126,7 @@ export default function ProjectSection() {
                     </div>
                 </div>
 
-                <div className="border border-aboutBorder bg-black-200 rounded-lg h-96 md:h-full">
+                <div className="border border-aboutBorder bg-aboutSectionColor rounded-lg h-96 md:h-full">
                     <Canvas className="w-[100%] h-[100%]">
                         <Suspense fallback={<CanvasLoader />}>
                             {myProjects[selectedProjectIndex].title == 'AI Trip Assistant' && <Plane

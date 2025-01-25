@@ -3,21 +3,26 @@ import { useGLTF } from '@react-three/drei'
 import { useTexture } from '@react-three/drei';
 import { useControls } from 'leva';
 
-export default function VirtualDesk({ onLaptopClick, ...props }) {
+export default function VirtualDesk({ onNoteClick, ...props }) {
   const { nodes, materials } = useGLTF('/models/my_virtual_desk.glb')
-  const bookTexture = useTexture('/assets/book.png');
-  const socialNetworkTexture = useTexture('/assets/socialnetwork.png');
-  const flightTexture = useTexture('/assets/flight.png');
+  const welcomeTexture = useTexture('/assets/welcome.png');
+  const socialNetworkTexture = useTexture('/assets/socialnetwork_green.png');
+  const flightTexture = useTexture('/assets/flight_yellow.png');
   const monitorOff = useTexture('/assets/off_monitor.png')
-  const bookAppLogo = useTexture('/assets/booklogo.png');
+  const bookAppLogo = useTexture('/assets/booklogo_pink.png');
+  const blankPaper = useTexture('/assets/blankpaper.png');
 
-  // const { x, y, z, rotationX, rotationY, rotationZ } = useControls('Social Network Position', {
-  //   x: { value: -159, min: -200, max: 200, step: 1 },
-  //   y: { value: 93, min: 0, max: 200, step: 1 },
-  //   z: { value: 100, min: -400, max: 100, step: 1 },
-  //   rotationX: { value: -0.03, min: -Math.PI, max: Math.PI, step: 0.01 },
-  //   rotationY: { value: -3.14, min: -Math.PI, max: Math.PI, step: 0.01 },
-  //   rotationZ: { value: 0.28, min: -Math.PI, max: Math.PI, step: 0.01 },
+  const scrollToProjects = () => {
+    const projectsSection = document.querySelector("#projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // const { rotationX, rotationY, rotationZ } = useControls('Social Network Position', {
+  //   rotationX: { value: 0, min: -Math.PI, max: Math.PI, step: 0.01 },
+  //   rotationY: { value: 80, min: -Math.PI, max: Math.PI, step: 0.01 },
+  //   rotationZ: { value: 0, min: -Math.PI, max: Math.PI, step: 0.01 },
   // });
   return (
     <group {...props} dispose={null}>
@@ -25,10 +30,7 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
         <mesh geometry={nodes.Cube_Mat91_1.geometry} material={materials['Mat.9.1']} />
         <mesh geometry={nodes.Cube_Mat8_1.geometry} material={materials['Mat.8']} />
       </group>
-      <group position={[-23.152, 78.928, -43.659]} rotation={[0, -Math.PI / 2, 0]}
-        onClick={onLaptopClick}
-        onPointerOver={() => (document.body.style.cursor = 'pointer')}
-        onPointerOut={() => (document.body.style.cursor = 'default')}>
+      <group position={[-23.152, 78.928, -43.659]} rotation={[0, -Math.PI / 2, 0]}>
         <mesh
           geometry={nodes.Clavier_Clavier_0.geometry}
           material={materials.Clavier}
@@ -40,7 +42,7 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
           position={[0, 0.65, -5.653]}
           rotation={[1.222, 0, 0]}
         >
-          <meshStandardMaterial map={bookTexture}
+          <meshStandardMaterial map={welcomeTexture}
             map-repeat={[1.5, 3]}
           />
         </mesh>
@@ -60,17 +62,38 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
         geometry={nodes.post_it__rose_Mat3_0.geometry}
         material={materials['Mat.3']}
         position={[-24.62, 78.378, -126.001]}
-      />
+        rotation={[-0.17, -1.58, 0.00]}
+        onPointerOver={() => (document.body.style.cursor = 'pointer')}
+        onPointerOut={() => (document.body.style.cursor = 'default')}
+        onClick={() => {
+          onNoteClick('book-app')
+          scrollToProjects();
+        }}
+      ><meshStandardMaterial map={bookAppLogo} map-repeat={[1, 1]} /></mesh>
       <mesh
         geometry={nodes.post_it_jaune_Mat2_0.geometry}
         material={materials['Mat.2']}
         position={[-24.62, 78.378, -117.773]}
-      />
+        rotation={[-0.17, -1.58, 0.00]}
+        onPointerOver={() => (document.body.style.cursor = 'pointer')}
+        onPointerOut={() => (document.body.style.cursor = 'default')}
+        onClick={() => {
+          onNoteClick('tripapp')
+          scrollToProjects();
+        }}
+      ><meshStandardMaterial map={flightTexture} map-repeat={[1, 1]} /></mesh>
       <mesh
         geometry={nodes.post_it_vert_Mat1_0.geometry}
         material={materials['Mat.1']}
         position={[-24.62, 78.378, -109.163]}
-      />
+        rotation={[-0.17, -1.58, 0.00]}
+        onPointerOver={() => (document.body.style.cursor = 'pointer')}
+        onPointerOut={() => (document.body.style.cursor = 'default')}
+        onClick={() => {
+          onNoteClick('socialnetwork')
+          scrollToProjects();
+        }}
+      ><meshStandardMaterial map={socialNetworkTexture} map-repeat={[1, 1]} /></mesh>
       <mesh
         geometry={nodes.Ecran_d_Ecran_d_0.geometry}
         material={materials.Ecran_d}
@@ -85,8 +108,7 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
         geometry={nodes.Feuille_vierge_Mat_0.geometry}
         material={materials.material}
         position={[-24.62, 78.378, -85.148]}
-        rotation={[0, -Math.PI / 2, 0]}
-      />
+        rotation={[0, -Math.PI / 2, 0]}><meshStandardMaterial map={blankPaper} map-repeat={[1.2, 1.1]} /></mesh>
       <mesh
         geometry={nodes.Tour_PC_1_Tour_PC_0.geometry}
         material={materials.Tour_PC}
@@ -98,11 +120,11 @@ export default function VirtualDesk({ onLaptopClick, ...props }) {
         position={[-75.607, 2.379, -42.564]}
         rotation={[Math.PI, 0, -Math.PI]}
       />
-      <mesh
+      {/* <mesh
         geometry={nodes.classeur_rouge_Mat5_0.geometry}
         material={materials['Mat.5']}
         position={[-7.781, 77.698, 19.175]}
-      />
+      /> */}
       <mesh
         geometry={nodes.claseur_bleu_Mat4_0.geometry}
         material={materials['Mat.4']}
