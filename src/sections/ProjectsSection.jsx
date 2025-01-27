@@ -48,6 +48,16 @@ export default function ProjectSection() {
     //     rotationZ: { value: 0.02, min: -Math.PI, max: Math.PI, step: 0.01 },
     // });
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSelectedProjectIndex((prevIndex) => 
+                prevIndex === projectCount - 1 ? 0 : prevIndex + 1
+            );
+        }, 10000); 
+
+        return () => clearInterval(interval);
+    }, [projectCount]);
+
     const handleNavigation = (direction) => {
         setSelectedProjectIndex((prevIndex) => {
             if (direction === 'previous') {
