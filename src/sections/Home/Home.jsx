@@ -60,9 +60,9 @@ export default function Home() {
 
     return (
         <section id="home" className="relative w-[90%] h-[600px] mx-auto p-16 max-1400:w-[100%]">
-            <IoIosArrowDown className="absolute bottom-[-10px] left-[48.5%] h-[50px] w-[50px] text-white cursor-pointer hover:scale-110" onClick={() => scrollToSection("#about")}/>
+            <IoIosArrowDown className="absolute bottom-[-10px] left-[48.5%] h-[50px] w-[50px] text-white cursor-pointer hover:scale-110" onClick={() => scrollToSection("#about")} />
             <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-50 w-[450px] p-1 h-[40px] border border-aboutBorder bg-aboutSectionColor rounded-lg text-white font-generalsans text-sm font-semibold flex justify-center items-center max-1400:w-[50%] text-center max-1400:text-[small] max-600:text-xs">
-                TIP: Click on the sticky notes to learn more about my projects
+                TIP: You can zoom the 3D model and interact with the sticky notes
             </div>
 
             <div className="absolute left-[100px] top-[95px] flex flex-col gap-10 max-600:flex-row max-600:gap-3 max-400:left-[80px]">
