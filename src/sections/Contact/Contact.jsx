@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Contact() {
     const [copied, setCopied] = useState(false);
@@ -37,7 +38,7 @@ export default function Contact() {
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" className="w-[40px] h-[40px] cursor-pointer hover:scale-110" alt="LinkedIn" />
                         </a>
                         <a href="https://github.com/ddimitrov17" target="_blank" rel="noreferrer">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" className="w-[40px] h-[40px] cursor-pointer hover:scale-110" alt="GitHub" />
+                            <FaGithub className="w-[40px] h-[40px] text-white cursor-pointer hover:scale-110" alt="GitHub"/>
                         </a>
                     </div>
                 </div>
