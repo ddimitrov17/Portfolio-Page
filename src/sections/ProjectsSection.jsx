@@ -9,6 +9,7 @@ import Plane from "./project models/Plane";
 import { useControls } from 'leva';
 import Books from "./project models/Books";
 import SocialNetwork from "./project models/Social";
+import { FaGithub } from "react-icons/fa";
 
 export default function ProjectSection() {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
@@ -50,10 +51,10 @@ export default function ProjectSection() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setSelectedProjectIndex((prevIndex) => 
+            setSelectedProjectIndex((prevIndex) =>
                 prevIndex === projectCount - 1 ? 0 : prevIndex + 1
             );
-        }, 10000); 
+        }, 20000);
 
         return () => clearInterval(interval);
     }, [projectCount]);
@@ -103,16 +104,18 @@ export default function ProjectSection() {
                                 </div>
                             ))}
                         </div>
-
-
-                        <a
+                        <a href={currentProject.source} target="_blank" className="flex items-center gap-2 cursor-pointer text-white">
+                            <FaGithub className="text-[1.5em]"/>
+                            <p>Source Code</p>
+                        </a>
+                        {currentProject.href != '' && (<a
                             className="flex items-center gap-2 cursor-pointer text-white"
                             href={currentProject.href}
                             target="_blank"
                             rel="noreferrer">
                             <p>Check Live Site</p>
                             <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-                        </a>
+                        </a>)}
                     </div>
 
                     <div className="flex justify-between items-center mt-7">
