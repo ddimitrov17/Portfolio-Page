@@ -4,7 +4,7 @@ import { useTexture } from '@react-three/drei';
 import { useControls } from 'leva';
 
 export default function VirtualDesk({ onNoteClick, ...props }) {
-  const { nodes, materials } = useGLTF('/models/my_virtual_desk.glb')
+  const { nodes, materials } = useGLTF('/Portfolio-Page/models/my_virtual_desk.glb')
   const welcomeTexture = useTexture('/assets/welcome.png');
   const socialNetworkTexture = useTexture('/assets/socialnetwork_green.png');
   const flightTexture = useTexture('/assets/flight_yellow.png');
@@ -134,4 +134,4 @@ export default function VirtualDesk({ onNoteClick, ...props }) {
   )
 }
 
-useGLTF.preload('/models/my_virtual_desk.glb')
+useGLTF.preload('/Portfolio-Page/models/my_virtual_desk.glb')

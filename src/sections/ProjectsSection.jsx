@@ -114,13 +114,13 @@ export default function ProjectSection() {
                             target="_blank"
                             rel="noreferrer">
                             <p>Check Live Site</p>
-                            <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                            <img src="/Portfolio-Page/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
                         </a>)}
                     </div>
 
                     <div className="flex justify-between items-center mt-7">
                         <button className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full" onClick={() => handleNavigation('previous')}>
-                            <img src="/assets/left-arrow.png" alt="left arrow" className="w-4 h-4" />
+                            <img src="/Portfolio-Page/assets/left-arrow.png" alt="left arrow" className="w-4 h-4" />
                         </button>
 
                         <div className="flex gap-2">
@@ -134,7 +134,7 @@ export default function ProjectSection() {
                         </div>
 
                         <button className="w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full" onClick={() => handleNavigation('next')}>
-                            <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+                            <img src="/Portfolio-Page/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
                         </button>
                     </div>
                 </div>

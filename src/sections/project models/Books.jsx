@@ -1,7 +1,7 @@
 import { useGLTF } from '@react-three/drei';
 
 export default function Books(props) {
-    const { nodes, materials } = useGLTF('/models/bookpile.glb')
+    const { nodes, materials } = useGLTF('/Portfolio-Page/models/bookpile.glb')
     return (
         <group {...props} dispose={null}>
             <mesh
@@ -16,4 +16,4 @@ export default function Books(props) {
     )
 }
 
-useGLTF.preload('/models/bookpile.glb')
+useGLTF.preload('/Portfolio-Page/models/bookpile.glb')

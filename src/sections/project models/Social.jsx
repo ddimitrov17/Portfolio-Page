@@ -1,7 +1,7 @@
 import { useGLTF } from '@react-three/drei';
 
 export default function SocialNetwork(props) {
-    const { nodes, materials } = useGLTF('/models/social.glb')
+    const { nodes, materials } = useGLTF('/Portfolio-Page/models/social.glb')
     return (
         <group {...props} dispose={null}>
             {/* <group position={[0.004, 0.716, 0.154]}>
@@ -78,4 +78,4 @@ export default function SocialNetwork(props) {
 }
 
 
-useGLTF.preload('/models/social.glb')
+useGLTF.preload('/Portfolio-Page/models/social.glb')

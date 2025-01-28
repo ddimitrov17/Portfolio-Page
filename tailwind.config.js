@@ -11,9 +11,9 @@ export default {
         aboutBorder: '#1C1C21',
       },
       backgroundImage: {
-        BookAppBackground: "url('/assets/booklogo_pink.png')",
-        TripAppBackground: "url('assets/flight_yellow.png')",
-        SocialNetworkBackground: "url('assets/socialnetwork_green.png')"
+        BookAppBackground: "url('/Portfolio-Page/assets/booklogo_pink.png')",
+        TripAppBackground: "url('/Portfolio-Page/assets/flight_yellow.png')",
+        SocialNetworkBackground: "url('/Portfolio-Page/assets/socialnetwork_green.png')"
       },
       screens: {
         'max-1400': { max: '1400px' },

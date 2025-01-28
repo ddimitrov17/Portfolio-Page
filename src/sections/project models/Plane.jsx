@@ -1,6 +1,6 @@
 import { useGLTF } from '@react-three/drei';
 export default function Plane(props) {
-    const { nodes, materials } = useGLTF('/models/airplane.glb')
+  const { nodes, materials } = useGLTF('/Portfolio-Page/models/airplane.glb')
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
@@ -105,4 +105,4 @@ export default function Plane(props) {
   )
 }
 
-useGLTF.preload('/models/airplane.glb')
+useGLTF.preload('/Portfolio-Page/models/airplane.glb')
